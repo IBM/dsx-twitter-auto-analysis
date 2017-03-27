@@ -1,0 +1,14 @@
+declared-services:
+  dtaa-twitter-service:
+    label: twitterinsights
+    plan: Free
+  dtaa-dashdb-service:
+    label: dashDB
+    plan: Entry
+applications:
+- services:
+   - dtaa-twitter-service
+   - dtaa-dashdb-service
+  memory: 128M
+  no-route: true
+  name: dsx-twitter-auto-analysis
