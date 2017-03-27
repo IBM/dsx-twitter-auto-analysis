@@ -3,13 +3,6 @@
 Twitter Analysis with Jupyter Notebooks
 =======================================
 
-# Twitter Sentiment Analysis with DSX
-
-A developer journey using Jupyter Notebooks in IBM Data Science Experience (DSX)
-to analyze Twitter sentiments.
-
-# Introduction
-
 In this developer journey you will use notebooks to analyze Twitter data and
 extract interesting insights from tweets. You you will easily perform complex
 computations on a large amount of data in a notebook by using SparkContext,
