@@ -1,3 +1,5 @@
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/dsx-twitter-auto-analysis)
+
 # Twitter Sentiment Analysis with DSX
 
 A developer journey using Jupyter Notebooks in IBM Data Science Experience (DSX)
