@@ -12,3 +12,6 @@ applications:
   memory: 128M
   no-route: true
   name: dsx-twitter-auto-analysis
+  health-check-type: none
+  buildpack: noop-buildpack
+
