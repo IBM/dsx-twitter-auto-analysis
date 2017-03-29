@@ -1,96 +1,112 @@
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/dsx-twitter-auto-analysis)
-
 [![Build Status](https://travis-ci.org/IBM/dsx-twitter-auto-analysis.svg?branch=master)](https://travis-ci.org/IBM/dsx-twitter-auto-analysis)
 
-Twitter Analysis with Jupyter Notebooks
-=======================================
+# Twitter Analysis with Jupyter Notebooks
 
-In this developer journey you will use notebooks to analyze Twitter data and
-extract interesting insights from tweets. You you will easily perform complex
-computations on a large amount of data in a notebook by using SparkContext,
-which enables you to run tasks on the Spark cluster. In addition, you will
-integrate data from dashDB using the Spark connector and use Spark and pandas
-DataFrames.
+In this developer journey we will use Jupyter notebooks to analyze Twitter
+data and extract interesting insights from tweets. It will easily perform
+complex computations on a large amount of data in a notebook by using
+SparkContext, which enables you to run tasks on the Spark cluster. In
+addition, it will integrate data from dashDB using the Spark connector
+and use Spark and pandas DataFrames.
 
-What does it use?
------------------
-* Jupyter Notebooks
-* Python programming language
-* Pandas (Python Data Analysis Library)
+When the reader has completed this journey, they will understand how to:
+
+* Create a dashDB warehouse containing Twitter data that includes advanced
+  enrichments like sentiment, gender and location
+* Transform the data using Python code with Apache Spark and Pandas data
+  frames.
+* Create visualizations using Matplotlib and Google GeoChart
+* Share notebooks and results
+
+The intended audience for this journey is application developers who need
+to efficiently build powerful data visualizations, but who may not have
+an abundance of time, data science experience or a dedicated data science
+team who could take ownership of such an effort.
+
+![Flow](doc/source/images/architecture.png)
+
+## Included Components
+
 * IBM Data Science Experience
-* IBM Insights for Twitter
-* IBM dashDB for Analytics
-* IBM Analytics for Apache Spark 
+* Bluemix Insights for Twitter
+* Bluemix dashDB for Analytics
+* Bluemix Analytics for Apache Spark
+* Jupyter Notebooks
+* Python
+* Pandas (Python Data Analysis Library)
 
-Intended audience
------------------
+# Steps
 
-Application developers who need to efficiently build powerful data
-visualizations, but who may not have an abundance of time, data science
-experience or a dedicated data science team who could take ownership of
-such an effort.
+Perform steps 1-6 or choose the **Deploy to Bluemix** button and jump to step 4.
 
-Setup
------
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/dsx-twitter-auto-analysis)
 
-1. Ensure you have a [Bluemix](http://bluemix.net) account.
+1. [Clone the repo](#1-clone-the-repo)
+2. [Sign up for the DataScience Experience](#2-sign-up-for-the-datascience-experience)
+3. [Create Bluemix services](#3-create-bluemix-services)
+4. [Configure dashDB](#4-configure-dashdb)
+5. [Running the Jupyter Notebook](#5-running-the-jupyter-notebook)
 
-2. Log into [IBM's Data Science Experience](http://datascience.ibm.com/)
+## 1. Clone the repo
 
-  By signing up for the Data Science Experience, two services: ``DSX-Spark`` and ``DSX-ObjectStore`` will be created in your bluemix account.
+Clone the `dsx-auto-twitter-analysis` locally. In a terminal, run:
 
-  <div style="text-align:center"><img src="doc/source/images/dsx_free_trial.png" width="50%" align="middle"></div>
+  `$ git clone https://github.com/ibm/dsx-auto-twitter-analysis`
 
-  <div style="text-align:center"><img src="doc/source/images/dsx_sign_up.png" width="50%" align="middle"></div>
+We’ll be using the file `notebooks/dsx_twitter_auto_analysis.ipynb`.
 
-3. Create various Bluemix services
+## 2. Sign up for the DataScience Experience
 
-  * Create a [**dashDB for Analytics**](https://console.ng.bluemix.net/catalog/services/dashdb-for-analytics) service
+Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services: ``DSX-Spark`` and ``DSX-ObjectStore`` will be created in your Bluemix account.
 
-    <img src="doc/source/images/dashdb_service.png">
+## 3. Create Bluemix services
 
-  * Create an [**Insights for Twitter**](https://console.ng.bluemix.net/catalog/services/insights-for-twitter) service
+Create the following Bluemix services:
 
-    <img src="doc/source/images/twitter_service.png">
+  * [**dashDB for Analytics**](https://console.ng.bluemix.net/catalog/services/dashdb-for-analytics)
+  * [**Insights for Twitter**](https://console.ng.bluemix.net/catalog/services/insights-for-twitter)
 
-4. Load tweets into dashDB
+## 4. Configure dashDB
 
-  The first step in the analysis process is to harvest the Twitter data.
-In this sample, we use the dashDB connector to the IBM Insights for Twitter
-service to seamlessly specify a filter query (tweeets about the six leading car
-manufacturers in 2015) and load the results into dashDB. This specific time frame
-and filter are being used to demonstrate analysis of a known Twitter spike.
+The first step in the analysis process is to harvest the Twitter data. In
+this sample, we use the dashDB connector to the IBM Insights for Twitter
+service to seamlessly specify a filter query (tweeets about the six leading
+car manufacturers in 2015) and load the results into dashDB. This specific
+time frame and filter are being used to demonstrate analysis of a known
+Twitter spike.
 
-  * Launch dashDB
-  * From the menu on the left, choose Load > Load Twitter Data
-  * **Connect to Twitter**: Select the existing **dashDB** service you created earlier
-    and select Next
+* Launch the dashDB, from the menu on the left, choose ``Load`` and select
+  ``Load Twitter Data``. This is a five step process outlined below.
 
-    <img src="doc/source/images/twitter_step1.png">
+* **Connect to Twitter**: Select the existing **dashDB** service you created
+  earlier
 
-  * **Search**: In the Search for Twitter data box, enter the query below and
-    retrieve a sampling of tweets. Once loaded, click Next:
-    ``posted:2015-01-01,2015-12-31 followers_count:2000 listed_count:1000 ``
-    ``(volkswagen OR vw OR toyota OR daimler OR mercedes OR bmw OR gm OR ``
-    ``"general motors" OR tesla)``
+![](doc/source/images/twitter_step1.png)
 
-    <img src="doc/source/images/twitter_step2.png">
+* **Search**: In the Search for Twitter data box, enter the query below and
+  retrieve a sampling of tweets.
 
-  * **Select table**: In the *Load the data into new tables with this prefix* field,
-    enter any text you wish for a namespace and click Next.
+  ``posted:2015-01-01,2015-12-31 followers_count:2000 listed_count:1000 ``
+  ``(volkswagen OR vw OR toyota OR daimler OR mercedes OR bmw OR gm OR ``
+  ``"general motors" OR tesla)``
 
-    <img src="doc/source/images/twitter_step3.png">
+![](doc/source/images/twitter_step2.png)
 
-  * **Load data**: This step can take up to 20 minutes, dashDB shows you progress
-    as the tweets load. When the data finishes loading, click Next.
+* **Select table**: In the *Load the data into new tables with this prefix*
+  field, enter any text you wish for a namespace.
 
-    <img src="doc/source/images/twitter_step4.png">
+![](doc/source/images/twitter_step3.png)
 
-  * **Load complete**: Peruse the reports that dashDB shows.
+* **Load data**: This step can take up to 20 minutes, dashDB shows you
+  progress as the tweets load.
 
-    <img src="doc/source/images/twitter_step5.png">
+![](doc/source/images/twitter_step4.png)
 
-5. Analyze in Jupyter Notebook
+* **Load complete**: Peruse the reports that dashDB shows.
+
+![](doc/source/images/twitter_step5.png)
+
+## 5. Running the Jupyter Notebook
 
 The sample is structured into different sections. In the first sections, you will perform a general analysis on data set then you will go deeper in the analysis to gain meaningful insights about manufacturers.
 Learning goals:
@@ -98,9 +114,6 @@ Learning goals:
 1. Determine the countries with the highest number of tweets (based on the user profile information).
 1. Analyze tweet sentiments
 1. Draw insights from tweets about major car manufacturers worldwide by combining Twitter timeline analysis with sentiment, gender distribution and location distribution.
-
-Running the Notebook
---------------------
 
 ### Create a notebook in DSX
 Use the menu on the left to select "My Projects" and then "Default Project".
@@ -126,18 +139,6 @@ At the top of the notebook, provide your dashDB info.
 ### Analyzing tweets
 
 In this notebook sample, you will use SparkContext which enables you to run tasks on the Spark cluster. Using Spark in notebooks enables you to analyze large amounts of data very efficiently. The sample begins with basic analysis steps which slowly progress into deeper analytic work. In this Notebook, we will analyze the loaded data to extract interesting insights and plots from it. This analysis is performed using SparkContext which enables us to run tasks on spark cluster. Using spark and notebooks is a very strong combination. It enables you to analyze big amount of data very efficiently. We will start with some basic analysis then go deeper gradually.
-
-### Notebook structure
-
-1. Importing libraries
-1. Defining global variables and helper functions
-1. Acquiring the data
-1. Transforming the data
-1. Determining the distribution of tweets across geographies
-1. Analyzing tweet sentiments
-1. Analyzing Twitter timelines
-1. Drawing insights from tweets about car manufacturers
-1. Summary
 
 ### How to execute the steps in your notebook:
 
@@ -175,3 +176,29 @@ You can share your notebook by selecting the “Share” button located in the t
   your dashDB credentials from being shared.
 * “All content, including code” - this option displays the notebook as is.
 * A variety of "download as" options are also availble in the menu.
+
+# Sample output
+
+The following is a sample data visualization:
+
+![](doc/source/images/output.png)
+
+For a full example see ``data/examples/sample_output.pdf``.
+
+# Troubleshooting
+
+Notebooks should following the structure outlined below:
+
+* Importing libraries
+* Defining global variables and helper functions
+* Acquiring the data
+* Transforming the data
+* Determining the distribution of tweets across geographies
+* Analyzing tweet sentiments
+* Analyzing Twitter timelines
+* Drawing insights from tweets about car manufacturers
+* Summary
+
+# License
+
+[Apache 2.0](LICENSE.txt)
