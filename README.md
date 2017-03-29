@@ -37,7 +37,7 @@ team who could take ownership of such an effort.
 
 # Steps
 
-Perform steps 1-6 or choose the **Deploy to Bluemix** button and jump to step 4.
+Perform steps 1-5 or choose the **Deploy to Bluemix** button and jump to step 4.
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/dsx-twitter-auto-analysis)
 
@@ -86,9 +86,9 @@ Twitter spike.
 * **Search**: In the Search for Twitter data box, enter the query below and
   retrieve a sampling of tweets.
 
-  ``posted:2015-01-01,2015-12-31 followers_count:2000 listed_count:1000 ``
-  ``(volkswagen OR vw OR toyota OR daimler OR mercedes OR bmw OR gm OR ``
-  ``"general motors" OR tesla)``
+  ```
+  posted:2015-01-01,2015-12-31 followers_count:2000 listed_count:1000 (volkswagen OR vw OR toyota OR daimler OR mercedes OR bmw OR gm OR "general motors" OR tesla)
+  ```
 
 ![](doc/source/images/twitter_step2.png)
 
