@@ -12,11 +12,11 @@ and use Spark and pandas DataFrames.
 When the reader has completed this journey, they will understand how to:
 
 * Create a dashDB warehouse containing Twitter data that includes advanced
-  enrichments like sentiment, gender and location
-* Transform the data using Python code with Apache Spark and Pandas data
+  enrichments like sentiment, gender and location.
+* Transform the data using Python code with Apache Spark and pandas data
   frames.
-* Create visualizations using Matplotlib and Google GeoChart
-* Share notebooks and results
+* Create visualizations using Matplotlib and Google GeoChart.
+* Share notebooks and results.
 
 The intended audience for this journey is application developers who need
 to efficiently build powerful data visualizations, but who may not have
@@ -33,7 +33,7 @@ team who could take ownership of such an effort.
 * Bluemix Analytics for Apache Spark
 * Jupyter Notebooks
 * Python
-* Pandas (Python Data Analysis Library)
+* pandas (Python Data Analysis Library)
 
 # Steps
 
@@ -162,12 +162,25 @@ There are several ways to execute the code cells in your notebook:
 
 ## 7. Analyzing the results
 
-We will now perform a general analysis on data set and go deeper in the analysis
-to gain meaningful insights about manufacturers. Some learning goals:
+The result of running the notebook is a report which may be shared with or
+without sharing the code. You can share the code for an audience that wants
+to see how you came your conclusions. The text, code and output/charts are
+combined in a single web page. For an audience that does not want to see the
+code, you can share a web page that only shows text and output/charts.
 
-1. Determine the countries with the highest number of tweets (based on the user profile information).
-2. Analyze tweet sentiments
-3. Draw insights from tweets about major car manufacturers worldwide by combining Twitter timeline analysis with sentiment, gender distribution and location distribution.
+The charts produced in the journey clearly demonstrate the following:
+
+* There was a significant negative peak in tweets about car manufacturers
+  during the period 2015-09-15 to 2015-10-15.
+* This spike was clearly dominated by tweets about the Volkswagen emissions
+  scandal.
+* The amount of Twitter influence was slightly higher for Volkswagen than
+  other car manufacturers.
+* The origin of the Volkswagen tweets was significantly from the United
+  States and Europe.
+* The gender of the tweeters for Volkswagen (and all car makers) was
+  significantly unknown. If we were to assume that the known-gender tweets
+  are a good representative, then we could say predominantly male.
 
 ## 8. Saving and Sharing
 
@@ -205,17 +218,7 @@ For a full example see [`data/examples/sample_output.pdf`](data/examples/sample_
 
 # Troubleshooting
 
-Notebooks should following the structure outlined below:
-
-* Importing libraries
-* Defining global variables and helper functions
-* Acquiring the data
-* Transforming the data
-* Determining the distribution of tweets across geographies
-* Analyzing tweet sentiments
-* Analyzing Twitter timelines
-* Drawing insights from tweets about car manufacturers
-* Summary
+[See DEBUGGING.md.](DEBUGGING.md)
 
 # License
 
