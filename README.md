@@ -56,7 +56,7 @@ Clone the `dsx-auto-twitter-analysis` locally. In a terminal, run:
 
   `$ git clone https://github.com/ibm/dsx-auto-twitter-analysis`
 
-We’ll be using the file `notebooks/dsx_twitter_auto_analysis.ipynb`.
+We’ll be using the file [`notebooks/dsx_twitter_auto_analysis.ipynb`](notebooks/dsx_twitter_auto_analysis.ipynb).
 
 ## 2. Sign up for the DataScience Experience
 
@@ -201,7 +201,7 @@ The following is a sample data visualization:
 
 ![](doc/source/images/output.png)
 
-For a full example see ``data/examples/sample_output.pdf``.
+For a full example see [`data/examples/sample_output.pdf`](data/examples/sample_output.pdf).
 
 # Troubleshooting
 
@@ -219,4 +219,4 @@ Notebooks should following the structure outlined below:
 
 # License
 
-[Apache 2.0](LICENSE.txt)
+[Apache 2.0](LICENSE)
