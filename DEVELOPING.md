@@ -13,10 +13,7 @@ to start over from the top if anything seems to be missing.
 * Defining global variables and helper functions
 * Acquiring the data
 * Transforming the data
-* Map the distribution of tweets by country
-* Pie charts for tweet sentiments
-* Analyzing Twitter timelines
-* Visualizing the popular topics during the peak
+* Visualizing the information
 * Summary
 
 Setting credentials
@@ -107,8 +104,10 @@ has the target structure on which to base the data analysis. This Spark
 DataFrame called df_cleaned_tweets functions as the main data source for all
 further processing.
 
-Map the distribution of tweets by country
------------------------------------------
+Visualizing the information
+---------------------------
+
+#### Map the distribution of tweets by country
 The df_cleaned_tweets DataFrame is aggregated by ``USER_COUNTRY`` to get a
 DataFrame with the tweet count per country. This Spark DataFrame is then
 converted to an in-memory Pandas DataFrame to prepare for plotting.
@@ -121,13 +120,11 @@ Matplotlib for a bar chart and Google GeoChart for an interactive world map.
 Following the plotting, the DataFrames for by-country aggregation are cleared
 to free up resources.
 
-Pie charts for tweet sentiments
--------------------------------
+#### Pie charts for tweet sentiments
 The by-sentiment charting code process is very similar to the above by-country
 process, but this time we used pie charts to show the sentiment percentages.
 
-Analyzing Twitter timelines
----------------------------
+#### Analyzing Twitter timelines
 To analyze the Twitter timeline, the data is aggregated by day and sentiment.
 Again we use Pandas DataFrames and Matplotlib. Line charts are used.
 
@@ -137,8 +134,7 @@ days with no tweets.
 Plotting tweets by car-maker over time is another example. The process is
 similar but with more subplots in this case.
 
-Visualizing the popular topics during the peak
-----------------------------------------------
+#### Visualizing the popular topics during the peak
 The recommended time period for the sake of this example, has a very
 significant, very negative peak in September. We used a DataFrame filter
 to focus on that data. The frequency of words used is calculated. "Stopwords"
