@@ -40,7 +40,7 @@ team who could take ownership of such an effort.
 Follow these steps to setup and run this developer journey. The steps are
 described in detail below.
 
-1. [Sign up for the Data Science Experience](#1-sign-up-for-the-datascience-experience)
+1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
 2. [Create Bluemix services](#2-create-bluemix-services)
 3. [Configure dashDB](#3-configure-dashdb)
 4. [Create the notebook](#4-create-the-notebook)
