@@ -37,43 +37,36 @@ team who could take ownership of such an effort.
 
 # Steps
 
-Perform steps 1-7 or choose the **Deploy to Bluemix** button and jump to step 4.
+Follow these steps to setup and run this developer journey. The steps are
+described in detail below.
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/dsx-twitter-auto-analysis)
+1. [Sign up for the Data Science Experience](#1-sign-up-for-the-datascience-experience)
+2. [Create Bluemix services](#2-create-bluemix-services)
+3. [Configure dashDB](#3-configure-dashdb)
+4. [Create the notebook](#4-create-the-notebook)
+5. [Run the notebook](#5-run-the-notebook)
+6. [Analyze the results](#6-analyze-the-results)
+7. [Save and Share](#7-save-and-share)
 
-1. [Clone the repo](#1-clone-the-repo)
-2. [Sign up for the DataScience Experience](#2-sign-up-for-the-datascience-experience)
-3. [Create Bluemix services](#3-create-bluemix-services)
-4. [Configure dashDB](#4-configure-dashdb)
-5. [Creating the notebook](#5-creating-the-notebook)
-6. [Running the notebook](#6-running-the-notebook)
-7. [Analyzing the results](#7-analyzing-the-results)
-8. [Saving and Sharing](#8-saving-and-sharing)
-
-## 1. Clone the repo
-
-Clone the `dsx-auto-twitter-analysis` locally. In a terminal, run:
-
-  `$ git clone https://github.com/ibm/dsx-auto-twitter-analysis`
-
-We’ll be using the file [`notebooks/dsx_twitter_auto_analysis.ipynb`](notebooks/dsx_twitter_auto_analysis.ipynb).
-
-## 2. Sign up for the DataScience Experience
+## 1. Sign up for the Data Science Experience
 
 Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services: ``DSX-Spark`` and ``DSX-ObjectStore`` will be created in your Bluemix account.
 
-## 3. Create Bluemix services
+## 2. Create Bluemix services
 
-Create the following Bluemix services:
+Create the following Bluemix services by clicking the **Deploy to Bluemix**
+button or by following the links to use the Bluemix UI and create them.
 
-  * [**dashDB for Analytics**](https://console.ng.bluemix.net/catalog/services/dashdb-for-analytics)
   * [**Insights for Twitter**](https://console.ng.bluemix.net/catalog/services/insights-for-twitter)
+  * [**dashDB for Analytics**](https://console.ng.bluemix.net/catalog/services/dashdb-for-analytics)
+  
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/dsx-twitter-auto-analysis)
 
-## 4. Configure dashDB
+## 3. Configure dashDB
 
 The first step in the analysis process is to harvest the Twitter data. In
 this sample, we use the dashDB connector to the IBM Insights for Twitter
-service to seamlessly specify a filter query (tweeets about the six leading
+service to seamlessly specify a filter query (tweets about the six leading
 car manufacturers in 2015) and load the results into dashDB. This specific
 time frame and filter are being used to demonstrate analysis of a known
 Twitter spike.
@@ -82,7 +75,8 @@ Twitter spike.
   ``Load Twitter Data``. This is a five step process outlined below.
 
 * **Connect to Twitter**: Select the existing **dashDB** service you created
-  earlier
+  earlier (if you used the **Deploy to Bluemix** button it is named
+  "dtaa-dashdb-service").
 
 ![](doc/source/images/twitter_step1.png)
 
@@ -109,21 +103,21 @@ Twitter spike.
 
 ![](doc/source/images/twitter_step5.png)
 
-## 5. Creating the notebook
+## 4. Create the notebook
 
 Use the menu on the left to select `My Projects` and then `Default Project`.
 Click on `Add notebooks` (upper right) to create a notebook.
 
-* Select the `From File` tab.
+* Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
-* Select `Choose File` and navigate to the `notebooks/dsx_twitter_analysis.ipynb`
-  file
+* Enter this Notebook URL: https://github.com/IBM/dsx-twitter-auto-analysis/blob/master/notebooks/dsx_twitter_auto_analysis.ipynb
 * Use the `Spark Service` pulldown to select your `DSX-Spark` service.
+* Click the `Create Notebook` button.
 
 ![](doc/source/images/create_notebook.png)
 
-## 6. Running the notebook
+## 5. Run the notebook
 
 At the top of the notebook, provide your dashDB info.
 
@@ -160,7 +154,7 @@ There are several ways to execute the code cells in your notebook:
     panel. Here you can schedule your notebook to be executed once at some future
     time, or repeatedly at your specified interval.
 
-## 7. Analyzing the results
+## 6. Analyze the results
 
 The result of running the notebook is a report which may be shared with or
 without sharing the code. You can share the code for an audience that wants
@@ -182,7 +176,7 @@ The charts produced in the journey clearly demonstrate the following:
   significantly unknown. If we were to assume that the known-gender tweets
   are a good representative, then we could say predominantly male.
 
-## 8. Saving and Sharing
+## 7. Save and Share
 
 ### How to save your work:
 
