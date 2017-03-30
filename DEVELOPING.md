@@ -89,8 +89,8 @@ a DataFrame named df_JOIN_TWEETS.
 Transforming the data
 ---------------------
 You can't analyze the data that you have just loaded into the data frames
-the way it is. You must first mung the data. The following transformations
-are performed on the data:
+the way it is. You must first transform the data. The following
+transformations are performed on the data:
 
 1) Remove the time from the timestamp values as only the date information is
    used.
@@ -116,7 +116,7 @@ We used a ``df_`` prefix for Spark DataFrames and a ``p_df_`` prefix for
 Pandas DataFrames.
 
 The distribution by country is charted two very different ways using
-matplotlib for a bar chart and Google GeoChart for an interactive world map.
+Matplotlib for a bar chart and Google GeoChart for an interactive world map.
 
 Following the plotting, the DataFrames for by-country aggregation are cleared
 to free up resources.
