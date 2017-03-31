@@ -200,7 +200,7 @@ options to specify exactly what you want shared from your notebook:
   that contain a *sensitive* tag. For example, `# @hidden_cell` is used to protect
   your dashDB credentials from being shared.
 * `All content, including code`: displays the notebook as is.
-* A variety of `download as` options are also availble in the menu.
+* A variety of `download as` options are also available in the menu.
 
 # Sample output
 
