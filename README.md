@@ -34,6 +34,10 @@ team who could take ownership of such an effort.
 * Jupyter Notebooks
 * Python
 * pandas (Python Data Analysis Library)
+* NumPy
+* Wordcloud
+* Matplotlib
+* Google GeoChart
 
 # Steps
 
