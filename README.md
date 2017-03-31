@@ -170,15 +170,31 @@ The charts produced in the journey clearly demonstrate the following:
 
 * There was a significant negative peak in tweets about car manufacturers
   during the period 2015-09-15 to 2015-10-15.
+
+![](doc/source/images/peak_negative.png)
+
 * This spike was clearly dominated by tweets about the Volkswagen emissions
   scandal.
+
+![](doc/source/images/peak_vw.png)
+![](doc/source/images/wordpie.png)
+![](doc/source/images/wordcloud.png)
+
 * The amount of Twitter influence was slightly higher for Volkswagen than
   other car manufacturers.
+
+![](doc/source/images/influence.png)
+
 * The origin of the Volkswagen tweets was significantly from the United
   States and Europe.
+
+![](doc/source/images/geo.png)
+
 * The gender of the tweeters for Volkswagen (and all car makers) was
   significantly unknown. If we were to assume that the known-gender tweets
   are a good representative, then we could say predominantly male.
+
+![](doc/source/images/gender.png)
 
 ## 7. Save and Share
 
@@ -208,11 +224,11 @@ options to specify exactly what you want shared from your notebook:
 
 # Sample output
 
-The following is a sample data visualization:
+The following is a sample data visualization with code:
 
 ![](doc/source/images/output.png)
 
-For a full example see [`data/examples/sample_output.pdf`](data/examples/sample_output.pdf).
+For a full example without code see [`data/examples/sample_output.pdf`](data/examples/sample_output.pdf).
 
 # Troubleshooting
 
