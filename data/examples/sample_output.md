@@ -1,4 +1,16 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
 # Twitter Data Sentiment Analysis
 
 Twitter tweets are an attractive data source to analyze
@@ -35,29 +47,15 @@ about manufacturers.
    by combining Twitter timeline analysis with sentiment, gender
    distribution and location distribution.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## The data set
 
 
 
-
-
     Number of tweets: 127898
-    Number of sentiment records: 41252
-    Aggregated tweets with sentiment scores: 31847
+    Number of sentiment records: 41280
+    Aggregated tweets with sentiment scores: 31877
+
+
 
 
 
@@ -71,7 +69,7 @@ about manufacturers.
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_15_0.png)
+![png](sample_output_files/sample_output_14_0.png)
 
 
 %%html
@@ -104,7 +102,7 @@ a sentiment value.
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_21_0.png)
+![png](sample_output_files/sample_output_20_0.png)
 
 
 
@@ -123,7 +121,7 @@ per date.
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_26_0.png)
+![png](sample_output_files/sample_output_25_0.png)
 
 
 
@@ -146,7 +144,7 @@ step is to detect the tweets that mention certain car manufacturers.
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_32_0.png)
+![png](sample_output_files/sample_output_31_0.png)
 
 
 ## Explaining the peak of tweets for VW
@@ -157,13 +155,11 @@ step is to detect the tweets that mention certain car manufacturers.
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_35_0.png)
+![png](sample_output_files/sample_output_34_0.png)
 
 
 
-
-
-![png](dsx-twitter-journey_files/dsx-twitter-journey_36_0.png)
+![png](sample_output_files/sample_output_34_1.png)
 
 
 
@@ -175,7 +171,7 @@ step is to detect the tweets that mention certain car manufacturers.
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_40_0.png)
+![png](sample_output_files/sample_output_38_0.png)
 
 
 ## Tweet distribution by car manufacturer
@@ -185,7 +181,7 @@ step is to detect the tweets that mention certain car manufacturers.
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_43_0.png)
+![png](sample_output_files/sample_output_41_0.png)
 
 
 ## Tweet distribution by sentiment by car maker
@@ -195,7 +191,7 @@ step is to detect the tweets that mention certain car manufacturers.
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_46_0.png)
+![png](sample_output_files/sample_output_44_0.png)
 
 
 ## Gender distribution 
@@ -210,7 +206,7 @@ tweets between male and female users.
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_49_0.png)
+![png](sample_output_files/sample_output_47_0.png)
 
 
 ## Measuring influence
@@ -236,7 +232,7 @@ indication about the people who are interested in a certain car maker.
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_54_0.png)
+![png](sample_output_files/sample_output_52_0.png)
 
 
 
@@ -248,13 +244,13 @@ indication about the people who are interested in a certain car maker.
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_58_0.png)
+![png](sample_output_files/sample_output_56_0.png)
 
 
 
 
 
-![png](dsx-twitter-journey_files/dsx-twitter-journey_59_0.png)
+![png](sample_output_files/sample_output_57_0.png)
 
 
 # Summary

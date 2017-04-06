@@ -15,8 +15,4 @@ fi
 
 jupyter nbconvert $1 --stdout --to script | sed 's/^get_ipython.*$/# noqa/' > flake.out
 
-flake8 --ignore=F401,F404,E402,E703,E712,W291,W293 flake.out
-
-## Single command version similar to what we use in CI. Exclusions vary.
-# jupyter nbconvert notebooks/*.ipynb --stdout --to script | flake8 - -v --ignore=W391
-
+flake8 --ignore=E703,E712,W291,W293 flake.out
