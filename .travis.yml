@@ -6,4 +6,4 @@ install:
   - "pip install six"
 script:
   - "pip install jupyter"
-  - jupyter nbconvert notebooks/*.ipynb --stdout --to script | sed 's/^get_ipython.*$/# noqa/' | flake8 - --ignore=F401,F404,E402,E703,E712,W291,W293 flake.out
+  - jupyter nbconvert notebooks/*.ipynb --stdout --to script | sed 's/^get_ipython.*$/# noqa/' | flake8 - --ignore=E703,E712,W291,W293 flake.out
