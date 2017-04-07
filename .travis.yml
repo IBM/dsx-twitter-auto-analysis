@@ -4,6 +4,8 @@ python:
 install:
   - "pip install flake8"
   - "pip install six"
+  - pip install -r test-requirements.txt"
 script:
   - "pip install jupyter"
   - jupyter nbconvert notebooks/*.ipynb --stdout --to script | sed 's/^get_ipython.*$/# noqa/' | flake8 - --ignore=E703,E712,W291,W293 flake.out
+  - cd tools && ./unittest.sh
