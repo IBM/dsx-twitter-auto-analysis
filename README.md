@@ -45,7 +45,7 @@ Follow these steps to setup and run this developer journey. The steps are
 described in detail below.
 
 1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
-2. [Create IBM Cloud services](#2-create-bluemix-services)
+2. [Create IBM Cloud services](#2-create-ibm-cloud-services)
 3. [Configure dashDB](#3-configure-dashdb)
 4. [Create the notebook](#4-create-the-notebook)
 5. [Run the notebook](#5-run-the-notebook)
