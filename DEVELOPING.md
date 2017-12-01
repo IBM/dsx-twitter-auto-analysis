@@ -41,7 +41,7 @@ you've verified that the pip install was successful.
 
 > **Note**:  After running a cell with pip install, you may need to restart
 the kernel and then run the cells again from the top.
- 
+
 Importing libraries
 -------------------
 Import and some setup of libraries is done near the top. This is another
@@ -97,7 +97,7 @@ transformations are performed on the data:
 
 3) Change the tweet posting location information from a string
    ('pos (42.000 42.000)') to a numeric value represented by the longitude
-    and latitude coordinates. 
+    and latitude coordinates.
 
 The output of the data transformation process is a new Spark DataFrame which
 has the target structure on which to base the data analysis. This Spark
@@ -158,19 +158,19 @@ feature, but in our example we decided to use a few tricks to make the
 "only text and output" web page look nice and clean.
 
 #### %%capture captured_io
- 
+
 "%%capture captured_io" magic is used to capture the output when nothing else
 works. We used that to hide the "!pip install" output and added a cell
 right after it that will print the captured output if DEBUG is True.
-   
+
 #### if DEBUG
 
 The DEBUG boolean and 'if' statements are used for the above and also
 throughout the notebook wherever some print statements were handy during
 development and might be handy in the future, but were not something we wanted
 to share in the final output.
-  
-#### Ending with a semi-colon 
+
+#### Ending with a semi-colon
 
 Notice the statements in the notebook that end with a semi-colon. It looks like
 bad Python, but it is actually a trick to prevent these statements from
