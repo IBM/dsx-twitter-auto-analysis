@@ -194,7 +194,7 @@ step is to detect the tweets that mention certain car manufacturers.
 ![png](sample_output_files/sample_output_44_0.png)
 
 
-## Gender distribution 
+## Gender distribution
 
 Another interesting insight when analyzing tweets about certain
 car manufacturers and what car manufacturers might want to pay
