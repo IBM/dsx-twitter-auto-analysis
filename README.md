@@ -28,9 +28,9 @@ team who could take ownership of such an effort.
 ## Included Components
 
 * IBM Data Science Experience
-* Bluemix Insights for Twitter
-* Bluemix dashDB for Analytics
-* Bluemix Analytics for Apache Spark
+* IBM Cloud Insights for Twitter
+* IBM Cloud dashDB for Analytics
+* IBM Cloud Analytics for Apache Spark
 * Jupyter Notebooks
 * Python
 * pandas (Python Data Analysis Library)
@@ -45,7 +45,7 @@ Follow these steps to setup and run this developer journey. The steps are
 described in detail below.
 
 1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
-2. [Create Bluemix services](#2-create-bluemix-services)
+2. [Create IBM Cloud services](#2-create-ibm-cloud-services)
 3. [Configure dashDB](#3-configure-dashdb)
 4. [Create the notebook](#4-create-the-notebook)
 5. [Run the notebook](#5-run-the-notebook)
@@ -54,17 +54,17 @@ described in detail below.
 
 ## 1. Sign up for the Data Science Experience
 
-Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services: ``DSX-Spark`` and ``DSX-ObjectStore`` will be created in your Bluemix account.
+Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services: ``DSX-Spark`` and ``DSX-ObjectStore`` will be created in your IBM Cloud account.
 
-## 2. Create Bluemix services
+## 2. Create IBM Cloud services
 
-Create the following Bluemix services by clicking the **Deploy to Bluemix**
-button or by following the links to use the Bluemix UI and create them.
+Create the following IBM Cloud services by clicking the **Deploy to Bluemix**
+button or by following the links to use the IBM Cloud UI and create them.
 
   * [**Insights for Twitter**](https://console.ng.bluemix.net/catalog/services/insights-for-twitter)
   * [**dashDB for Analytics**](https://console.ng.bluemix.net/catalog/services/dashdb-for-analytics)
-
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/dsx-twitter-auto-analysis&cm_mmc=github-code-_-native-_-tweetswjn-_-deploy2bluemix)
+  
+[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/dsx-twitter-auto-analysis&cm_mmc=github-code-_-native-_-tweetswjn-_-deploy2bluemix)
 
 ## 3. Configure dashDB
 
@@ -79,7 +79,7 @@ Twitter spike.
   ``Load Twitter Data``. This is a five step process outlined below.
 
 * **Connect to Twitter**: Select the existing **dashDB** service you created
-  earlier (if you used the **Deploy to Bluemix** button it is named
+  earlier (if you used the **Deploy to IBM Cloud** button it is named
   "dtaa-dashdb-service").
 
 ![](doc/source/images/twitter_step1.png)
