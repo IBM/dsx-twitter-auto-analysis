@@ -63,7 +63,7 @@ button or by following the links to use the Bluemix UI and create them.
 
   * [**Insights for Twitter**](https://console.ng.bluemix.net/catalog/services/insights-for-twitter)
   * [**dashDB for Analytics**](https://console.ng.bluemix.net/catalog/services/dashdb-for-analytics)
-  
+
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm/dsx-twitter-auto-analysis&cm_mmc=github-code-_-native-_-tweetswjn-_-deploy2bluemix)
 
 ## 3. Configure dashDB
