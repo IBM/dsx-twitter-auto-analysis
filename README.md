@@ -1,3 +1,7 @@
+# OBSOLETE: This code pattern is obsolete.
+
+> The [Insights for Twitter service is retired](https://www.ibm.com/blogs/bluemix/2017/03/retirement-insights-twitter-service/) from IBM Cloud. This repository will not be updated. We will keep the repository available for folks interested in some of the technical details. Please refer to other code patterns such as https://github.com/ibm/cognitive-social-crm for a similar use case.
+
 [![Build Status](https://travis-ci.org/IBM/dsx-twitter-auto-analysis.svg?branch=master)](https://travis-ci.org/IBM/dsx-twitter-auto-analysis)
 
 # Twitter Analysis with Jupyter Notebooks
