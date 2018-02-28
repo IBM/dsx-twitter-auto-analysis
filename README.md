@@ -1,3 +1,13 @@
+
+
+
+# OBSOLETE:  This code pattern is obsolete. Insights for Twitter is no longer available. Please refer to other code patterns such as https://github.com/ibm/cognitive-social-crm 
+
+
+
+
+
+
 [![Build Status](https://travis-ci.org/IBM/dsx-twitter-auto-analysis.svg?branch=master)](https://travis-ci.org/IBM/dsx-twitter-auto-analysis)
 
 # Twitter Analysis with Jupyter Notebooks
