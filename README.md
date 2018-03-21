@@ -31,7 +31,7 @@ team who could take ownership of such an effort.
 
 ## Included Components
 
-* IBM Data Science Experience
+* IBM Watson Studio
 * IBM Cloud Insights for Twitter
 * IBM Cloud dashDB for Analytics
 * IBM Cloud Analytics for Apache Spark
@@ -48,7 +48,7 @@ team who could take ownership of such an effort.
 Follow these steps to setup and run this developer journey. The steps are
 described in detail below.
 
-1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
+1. [Sign up for the Watson Studio](#1-sign-up-for-the-data-science-experience)
 2. [Create IBM Cloud services](#2-create-ibm-cloud-services)
 3. [Configure dashDB](#3-configure-dashdb)
 4. [Create the notebook](#4-create-the-notebook)
@@ -56,9 +56,9 @@ described in detail below.
 6. [Analyze the results](#6-analyze-the-results)
 7. [Save and Share](#7-save-and-share)
 
-## 1. Sign up for the Data Science Experience
+## 1. Sign up for the Watson Studio
 
-Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services: ``DSX-Spark`` and ``DSX-ObjectStore`` will be created in your IBM Cloud account.
+Sign up for IBM's [Watson Studio](http://datascience.ibm.com/). By signing up for the Watson Studio, two services: ``Watson Studio-Spark`` and ``Watson Studio-ObjectStore`` will be created in your IBM Cloud account.
 
 ## 2. Create IBM Cloud services
 
@@ -120,7 +120,7 @@ Click on `Add notebooks` (upper right) to create a notebook.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
 * Enter this Notebook URL: https://github.com/IBM/dsx-twitter-auto-analysis/blob/master/notebooks/dsx_twitter_auto_analysis.ipynb
-* Use the `Spark Service` pulldown to select your `DSX-Spark` service.
+* Use the `Spark Service` pulldown to select your `Watson Studio-Spark` service.
 * Click the `Create Notebook` button.
 
 ![](doc/source/images/create_notebook.png)
