@@ -58,7 +58,7 @@ described in detail below.
 
 ## 1. Sign up for the Watson Studio
 
-Sign up for IBM's [Watson Studio](http://datascience.ibm.com/). By signing up for the Watson Studio, two services: ``Watson Studio-Spark`` and ``Watson Studio-ObjectStore`` will be created in your IBM Cloud account.
+Sign up for IBM's [Watson Studio](http://datascience.ibm.com/). By signing up for the Watson Studio, two services: ``Apache Spark`` and ``Object Storage`` will be created in your IBM Cloud account.
 
 ## 2. Create IBM Cloud services
 
@@ -120,7 +120,7 @@ Click on `Add notebooks` (upper right) to create a notebook.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
 * Enter this Notebook URL: https://github.com/IBM/dsx-twitter-auto-analysis/blob/master/notebooks/dsx_twitter_auto_analysis.ipynb
-* Use the `Spark Service` pulldown to select your `Watson Studio-Spark` service.
+* Use the `Spark Service` pulldown to select your `Apache Spark` service.
 * Click the `Create Notebook` button.
 
 ![](doc/source/images/create_notebook.png)
