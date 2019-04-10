@@ -1,6 +1,6 @@
-# RETIRED: This repository is no longer maintained :warning:
+# :warning: WARNING: This repository is no longer maintained :warning:
 
-> The [Insights for Twitter service](https://www.ibm.com/blogs/bluemix/2017/03/retirement-insights-twitter-service/) from IBM Cloud has been sunset. This repository will not be updated. We will keep the repository available in read-only mode. Please refer to https://github.com/ibm/cognitive-social-crm for a similar use case.
+> The [Insights for Twitter service](https://www.ibm.com/blogs/bluemix/2017/03/retirement-insights-twitter-service/) from IBM Cloud has been sunset. This repository will not be updated. We will keep the repository available in read-only mode for illustrative purposes only. Refer to https://github.com/ibm/cognitive-social-crm for a similar example.
 
 ---
 
